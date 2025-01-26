@@ -9,11 +9,23 @@ class DemoListView extends StatelessWidget {
       appBar: AppBar(
         title: Text("List view"),
       ),
-      body: ListView(
-        children: 
-          List.generate(20,(index)=> Text('hello')),
-      
-      ),
+      body: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            height: 200,
+            color: Colors.red,
+          ),
+          Expanded(
+     
+            child: ListView(
+              children: 
+                List.generate(100,(index)=> Text('hello')),
+            
+            ),
+          ),
+        ],
+      )
     );
   }
 }
